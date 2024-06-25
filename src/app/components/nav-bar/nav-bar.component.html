@@ -1,50 +1,48 @@
 <header>
     <div class="container">
-        <h1>Restaurante Chifa shenyang </h1>
+        <h1>Restaurante Chifa Shenyang</h1>
         <nav>
             <ul>
                 <li class="nav-item">
                     <a routerLink="home">Home</a>
                 </li>
-                @if(ocultar2 == 'mesero' ){
-                <li class="nav-item">
-                    <a routerLink="productos">Menu</a>
+
+                <!-- Mostrar lista de menú para 'admin' -->
+                <li class="nav-item" *ngIf="ocultar2 === 'mesero'">
+                    <a routerLink="productos">Lista Menu</a>
                 </li>
-                }
-                @if(ocultar2 == 'admin' ){
-                <li class="nav-item">
+
+                <!-- Mostrar lista de menú para 'admin' -->
+                <li class="nav-item" *ngIf="ocultar2 === 'admin'">
                     <a routerLink="lista-menu">Lista Menu</a>
                 </li>
-                }
-                @if(ocultar2 == 'admin' ){
-                <li class="nav-item">
+
+                <!-- Mostrar lista de usuarios para 'admin' -->
+                <li class="nav-item" *ngIf="ocultar2 === 'admin'">
                     <a routerLink="usuarios">Lista Usuarios</a>
                 </li>
-                }
-                @if(ocultar2 == 'mesero' ){
-                <li class="nav-item">
+
+                <!-- Mostrar lista de órdenes y agregar órden para 'mesero' -->
+                <li class="nav-item" *ngIf="ocultar2 === 'mesero'">
                     <a routerLink="lista-ordenes">Lista de Ordenes</a>
                 </li>
-                }
-                @if(ocultar2 == 'mesero' ){
-                <li class="nav-item">
+                <li class="nav-item" *ngIf="ocultar2 === 'mesero'">
                     <a routerLink="agregar-orden">Orden</a>
                 </li>
-                }
                 
-                <li class="nav-item">
+                <!-- Ocultar Registro e Iniciar Sesión al iniciar -->
+                <li class="nav-item" *ngIf="ocultar !== 'true'">
                     <a routerLink="registro" style="margin-left: 15px;">Registro</a>
                 </li>
-                
-                <li class="nav-item">
+
+                <li class="nav-item" *ngIf="ocultar !== 'true'">
                     <a routerLink="login" style="margin-left: 15px;">Iniciar Sesión</a>
                 </li>
-            
-                @if(ocultar == 'true' ){
-                <li class="nav-item">
+
+                <!-- Mostrar botón de Cerrar Sesión si ocultar es 'true' -->
+                <li class="nav-item" *ngIf="ocultar === 'true'">
                     <button class="btn btn-danger" (click)="cerrar()">Cerrar Sesión</button>
                 </li>
-                }
             </ul>
         </nav>
     </div>

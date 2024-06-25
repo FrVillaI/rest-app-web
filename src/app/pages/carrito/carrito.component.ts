@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { CarritoService } from '../../service/carrito.service';
+import { OrdenesService } from '../../service/ordenes.service';
 
 @Component({
   selector: 'app-carrito',
@@ -15,7 +16,8 @@ export class CarritoComponent {
   totalIva: number = 0;
   totalPagarIva: number = 0;
 
-  constructor(private servicios: CarritoService) { }
+  constructor(private servicios: CarritoService) { };
+  
 
   ngOnInit() {
     this.productos = this.servicios.getProductos();
@@ -46,4 +48,7 @@ export class CarritoComponent {
     window.location.reload()
   }
   
+  agregarProducto(){
+
+  }
 }

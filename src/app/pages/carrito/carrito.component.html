@@ -1,5 +1,22 @@
 <div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel" style="background-color:#F2F2F2;">
     <div class="container">
+        <!-- Campos de Nombre y Mesa -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <form class="d-flex justify-content-end">
+                    <div class="me-2">
+                        <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre completo">
+                    </div>
+                    <div class="me-2">
+                        <input type="text" class="form-control" id="mesa" name="mesa" placeholder="Número de mesa">
+                    </div>
+                    <div>
+                        <button (click)="agregarProducto()" class="btn btn-success">Agregar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
         <div class="row">
             <!-- Sección de productos en el lado izquierdo -->
             <div class="col-md-8">
@@ -19,7 +36,7 @@
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
-                                                <img src={{item.url}} class="card-img-top h-100" alt="Waterfall" />
+                                                <img src={{item.url}} class="card-img-top h-100" alt="Imagen del producto" />
                                             </div>
                                         </div>
                                     </div>
@@ -35,7 +52,6 @@
                 <div class="card bg-white text-dark p-4" style="width: 100%;">
                     <h1>Total a pagar: ${{totalPagar}}</h1>
                     <h1>Total a pagar más IVA: ${{totalPagarIva}}</h1>
-                    <button (click)="finalizar()" class="btn btn-success mt-3">Finalizar compra</button>
                 </div>
             </div>
         </div>

@@ -1,29 +1,37 @@
-<div class="form-container">
-    <form (ngSubmit)="guardar(formulario)" #formulario="ngForm" class="custom-form">
-        <label class="form-label">ID</label>
-        <input type="text" name="id" [(ngModel)]="id" class="form-control">
-        
-<label class="form-label">Nombre</label>
-        <input type="nombre" name="nombre" [(ngModel)]="nombre" class="form-control">
+<div class="container mt-5" style="padding: 60px; background: url('https://i.blogs.es/65c10b/restaurantechino/1366_2000.jpg') no-repeat center center fixed; background-size: cover;">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4" style="border-radius: 20px; border: 2px solid #555; background-color: rgba(249, 249, 249, 0.8);">
+                <h1 class="text-center mb-4" style="color: #555; font-family: 'Arial', sans-serif; font-size: 2.5rem; font-weight: bold;">Registro</h1>
 
-        <label class="form-label">Apellido</label>
-        <input type="apellido" name="apellido" [(ngModel)]="apellido" class="form-control">
+                <form (ngSubmit)="guardar(formulario)" #formulario="ngForm" class="custom-form">
+                    <label class="form-label">ID</label>
+                    <input type="text" name="id" [(ngModel)]="id" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
 
-        
+                    <label class="form-label">Nombre</label>
+                    <input type="text" name="nombre" [(ngModel)]="nombre" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
 
+                    <label class="form-label">Apellido</label>
+                    <input type="text" name="apellido" [(ngModel)]="apellido" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
 
-        <label class="form-label">Email</label>
-        <input type="email" name="email" [(ngModel)]="email" class="form-control">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" [(ngModel)]="email" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
 
-        <label class="form-label">Password</label>
-        <input type="password" name="password" [(ngModel)]="password" class="form-control">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="password" [(ngModel)]="password" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
 
-        <label class="form-label">Rol</label>
-        <select name="role" [(ngModel)]="role" class="form-control">
-            <option value="admin">admin</option>
-            <option value="mesero">mesero</option>
-        </select>
+                    <label class="form-label">Rol</label>
+                    <select name="role" [(ngModel)]="role" class="form-control" style="border-radius: 10px; border: 2px solid #555;">
+                        <option value="admin">admin</option>
+                        <option value="mesero">mesero</option>
+                    </select>
 
-        <button type="submit" class="btn btn-success">Enviar</button>
-    </form>
+                    <button type="submit" class="btn btn-success w-100" style="border-radius: 10px; background-color: rgb(209, 82, 65); border-color: rgb(250, 16, 16);">Enviar</button>
+                </form>
+                <div *ngIf="role" style="margin-top: 20px;">
+                    <p style="color: #555; font-weight: bold;">User Role: {{ role }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

@@ -45,6 +45,17 @@
       "apellido": "20",
       "role": "mesero",
       "id": 13
+    },
+    {
+      "email": "dsf@gmail.com",
+      "password": "$2a$10$sZreB8qsdhe4vh2tDpcEru4pqAc2mrSZebbfW/nmjMLY4O3wWtlpW",
+      "nombre": "AAAAA",
+      "apellido": "sdfg",
+      "role": "mesero",
+      "id": 14
     }
+  ],
+  "ordenes":[
+    
   ]
 }
