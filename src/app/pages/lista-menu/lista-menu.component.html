@@ -1,0 +1,28 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Codigo</th>
+            <th>Categoria</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (item of productos; track item) {
+        <tr>
+            <td> {{item.productoID}} </td>
+            <td> {{item.nombre}} </td>
+            <td> {{item.codigo}}</td>
+            <td> {{item.categoria}}</td>
+            <td> {{item.precio}} </td>
+            <td>
+                <a class="btn btn-warning btn-sm" [routerLink]="['/editar-producto',item.productoID]" data-toggle="tooltip" title="Editar usuario"><i class="bi bi-pencil-fill">Editar</i></a>
+                <button class="btn btn-danger btn-sm" (click)="eliminar(item.productoID)" data-toggle="tooltip" title="Eliminar usuario"><i class="bi bi-trash-fill"></i>Eliminar</button>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+<a class="btn btn-success" [routerLink]="['/agregar-productos']">Agregar Producto</a>

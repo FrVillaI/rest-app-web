@@ -29,6 +29,14 @@
       "password": "$2a$10$x3biphySq4eE29u1ECX1P.X.7/IjpgjDm.fEfmXVW2.THt0V4FU1y",
       "role": "admin",
       "id": 10
+    },
+    {
+      "id": 11,
+      "email": "a@yahoo.com",
+      "password": "$2a$10$Xwy9OR4ZJXb5nbZzg3ifmupDTzZa4Nv4DDwzZKpEbq.WxhlZPCKDW",
+      "nombre": "AliceXD",
+      "apellido": "Jones",
+      "tipoUser": "admin"
     }
   ]
 }

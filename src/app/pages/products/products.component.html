@@ -1,28 +1,22 @@
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Codigo</th>
-            <th>Categoria</th>
-            <th>Precio</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        @for (item of productos; track item) {
-        <tr>
-            <td> {{item.productoID}} </td>
-            <td> {{item.nombre}} </td>
-            <td> {{item.codigo}}</td>
-            <td> {{item.categoria}}</td>
-            <td> {{item.precio}} </td>
-            <td>
-                <a class="btn btn-warning btn-sm" [routerLink]="['/editar-producto',item.productoID]" data-toggle="tooltip" title="Editar producto"><i class="bi bi-pencil-fill">Editar</i></a>
-                <button class="btn btn-danger btn-sm" (click)="eliminar(item.productoID)" data-toggle="tooltip" title="Eliminar producto"><i class="bi bi-trash-fill"></i>Eliminar</button>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-<a class="btn btn-success" [routerLink]="['/agregar-producto']">Agregar Producto</a>
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel">
+    <div class="carousel-inner py-4">
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row">
+                    @for (item of productos; track item) {
+                    <div class="col-lg-4">
+                        <div class="card product-card" style="margin-top: 20px">
+                            <img src={{item.url}} class="card-img-top" alt="{{item.nombre}}"/>
+                            <div class="card-body">
+                                <h5 class="card-title">{{item.nombre}}</h5>
+                                <p class="card-text">{{item.precio}}</p>
+                                <a [routerLink]="['/detalle-productos', item.productoID]" class="btn btn-primary btn-details">Más Detalles</a>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

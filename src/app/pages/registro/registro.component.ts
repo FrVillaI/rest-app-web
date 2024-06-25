@@ -16,10 +16,11 @@ import { Nosotros2Service } from '../../service/nosotros2.service';
 export class RegistroComponent {
 
   id: any
+  nombre:any
+  apellido:any
   email: any
    password: any
    role:any
-    
   
 
     servicio = inject(Nosotros2Service)
