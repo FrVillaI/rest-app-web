@@ -1,11 +1,11 @@
 import { TestBed } from '@angular/core/testing';
 import { CanActivateFn } from '@angular/router';
 
-import { privadoGuard } from './privado.guard';
+import { rolGuard } from './rol.guard';
 
-describe('privadoGuard', () => {
+describe('rolGuard', () => {
   const executeGuard: CanActivateFn = (...guardParameters) => 
-      TestBed.runInInjectionContext(() => privadoGuard(...guardParameters));
+      TestBed.runInInjectionContext(() => rolGuard(...guardParameters));
 
   beforeEach(() => {
     TestBed.configureTestingModule({});

@@ -27,16 +27,11 @@
             <span class="input-group-text" id="basic-addon1">{{'🦰'}}</span>
             <input type="text" class="form-control" placeholder="Apellido" name="apellido" [(ngModel)]="apellido">
         </div>
-        <label for="pwd" class="form-label">Edad:</label>
-        <div class="input-group mb-3">
-            <span class="input-group-text" id="basic-addon1">{{''}}</span>
-            <input type="number" class="form-control" placeholder="Edad" name="edad" [(ngModel)]="edad">
-        </div>
         <label for="pwd" class="form-label">Tipo de usuario:</label>
         <div class="input-group mb-3">
             <span class="input-group-text" id="basic-addon1">{{''}}</span>
-            <select name="tipoUser"  class="form-control" [(ngModel)]="tipoUser">
-                <option value="usuario">Usuario</option>
+            <select name="role"  class="form-control" [(ngModel)]="role">
+                <option value="mesero">Mesero</option>
                 <option value="admin">Admin</option>
             </select>
         </div>

@@ -16,7 +16,8 @@
         <h5 class="product-detail-title">Descripción:</h5>
         <p class="product-detail">{{producto.descripcion}}</p>
         <a routerLink="/productos" class="btn btn-primary return-button">Regresar</a>
-        
-        <button (click)="agregarC()" class="btn btn-success add-to-cart-button">Añadir al carrito</button>
+        @if(ocultar2 == 'mesero' ){
+        <button (click)="agregarC()" class="btn btn-success add-to-cart-button">Añadir a la orden</button>
+        }
     </div>
 </div>

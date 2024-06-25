@@ -6,30 +6,45 @@
                 <li class="nav-item">
                     <a routerLink="home">Home</a>
                 </li>
+                @if(ocultar2 == 'mesero' ){
                 <li class="nav-item">
                     <a routerLink="productos">Menu</a>
                 </li>
+                }
+                @if(ocultar2 == 'admin' ){
                 <li class="nav-item">
                     <a routerLink="lista-menu">Lista Menu</a>
                 </li>
+                }
+                @if(ocultar2 == 'admin' ){
                 <li class="nav-item">
-                    <a  routerLink="usuarios">Lista Usuarios</a>
+                    <a routerLink="usuarios">Lista Usuarios</a>
                 </li>
+                }
+                @if(ocultar2 == 'mesero' ){
                 <li class="nav-item">
-                    <a  routerLink="lista-ordenes">Lista de Ordenes</a>
+                    <a routerLink="lista-ordenes">Lista de Ordenes</a>
                 </li>
+                }
+                @if(ocultar2 == 'mesero' ){
                 <li class="nav-item">
-                    <a  routerLink="agregar-orden">Agregar Orden</a>
+                    <a routerLink="agregar-orden">Orden</a>
                 </li>
+                }
+                
                 <li class="nav-item">
-                    <a  routerLink="registro" style="margin-left: 15px;">Registro</a>
+                    <a routerLink="registro" style="margin-left: 15px;">Registro</a>
                 </li>
+                
                 <li class="nav-item">
-                    <a  routerLink="login" style="margin-left: 15px;">Iniciar Sesión</a>
+                    <a routerLink="login" style="margin-left: 15px;">Iniciar Sesión</a>
                 </li>
+            
+                @if(ocultar == 'true' ){
                 <li class="nav-item">
                     <button class="btn btn-danger" (click)="cerrar()">Cerrar Sesión</button>
                 </li>
+                }
             </ul>
         </nav>
     </div>

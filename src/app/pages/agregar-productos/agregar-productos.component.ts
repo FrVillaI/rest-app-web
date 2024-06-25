@@ -33,7 +33,7 @@ export class AgregarProductosComponent {
     };
 
     this.servicio.postProductos(producto).subscribe(() => {
-      this.ruta.navigateByUrl("lista-productos");
+      this.ruta.navigateByUrl("lista-menu");
     });
   }
 }

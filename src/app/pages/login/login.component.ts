@@ -37,7 +37,8 @@ export class LoginComponent {
         localStorage.setItem('role', response.user.role);
         this.userRole = response.user.role; 
         console.log('Logged in with role:', response.user.role);
-        this.router.navigate(['home']); 
+        window.location.href = 'home'
+        //this.router.navigate(['home']); 
  
 
 

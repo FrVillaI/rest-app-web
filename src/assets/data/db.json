@@ -19,9 +19,9 @@
       "role": "mesero"
     },
     {
-      "email": "ant2003@gmail.com",
-      "password": "$2a$10$wc3GVEALXC.fwoVMD6fOXOBin7h9Fps6OK0NpCkXkNJshqCEiXw2e",
       "id": 9,
+      "email": "ant2003@gmail.com",
+      "password": "$2a$10$pjMH6yytl2KxWMGLxqR//.qUa3pRappUYwOgX1fLZiqFhSt8gIagu",
       "role": "admin"
     },
     {
@@ -31,12 +31,20 @@
       "id": 10
     },
     {
-      "id": 11,
-      "email": "a@yahoo.com",
-      "password": "$2a$10$Xwy9OR4ZJXb5nbZzg3ifmupDTzZa4Nv4DDwzZKpEbq.WxhlZPCKDW",
+      "email": "aj@yahoo.com",
+      "password": "$2a$10$TXBl2/pMW9WUWNJz7E/RHecd2U36sFnkBK65JB54Wg6ahM6d3udf2",
       "nombre": "AliceXD",
       "apellido": "Jones",
-      "tipoUser": "admin"
+      "role": "mesero",
+      "id": 12
+    },
+    {
+      "email": "20@gmail.com",
+      "password": "$2a$10$BLyyn2m59wmMksN6Qq5tZu0Fmcuj.ZztGKqLJjj1N/0AIMFksmBHG",
+      "nombre": "20",
+      "apellido": "20",
+      "role": "mesero",
+      "id": 13
     }
   ]
 }

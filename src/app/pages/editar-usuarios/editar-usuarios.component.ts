@@ -20,7 +20,7 @@ export class EditarUsuariosComponent {
   password: any
   edad: any
   genero: any
-  tipoUser: any
+  role: any
   nombre: any
   apellido: any
 
@@ -32,7 +32,7 @@ export class EditarUsuariosComponent {
         this.password = p.password
         this.edad = p.edad
         this.genero = p.genero
-        this.tipoUser = p.tipoUser
+        this.role = p.role
         this.nombre = p.nombre
         this.apellido = p.apellido
       })

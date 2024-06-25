@@ -8,25 +8,26 @@ import { EditarProductosComponent } from './pages/editar-productos/editar-produc
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegistroComponent } from './pages/registro/registro.component';
-import { privadoGuard } from './guards/privado.guard';
 import { EditarUsuariosComponent } from './pages/editar-usuarios/editar-usuarios.component';
 import { ListaMenuComponent } from './pages/lista-menu/lista-menu.component';
 import { DetalleProductosComponent } from './pages/detalle-productos/detalle-productos.component';
+import { ListaOrdenesComponent } from './pages/lista-ordenes/lista-ordenes.component';
+import { rolGuarMe, rolGuardAd } from './guard/rol.guard';
+import { loginGuard, registroGuard } from './guard/login.guard';
 
 export const routes: Routes = [
     { path: "home", component: HomeComponent },
-    { path: "productos", component: ProductsComponent },
-    { path: "usuarios", component: UsuariosComponent},
-    { path: "lista-menu", component: ListaMenuComponent },
-    { path: "login", component: LoginComponent},
-    { path: "registro", component: RegistroComponent},
-    { path: "agregar-orden", component: CarritoComponent},
-    { path: "agregar-producto", component: AgregarProductosComponent},
-    { path: "editar-producto/:idProducto", component: EditarProductosComponent},
-    { path: "editar-usuario/:idUsuario", component: EditarUsuariosComponent },
-    { path: "registro-ad", component: RegistroComponent },
-    { path: "detalle-productos/:idProducto", component: DetalleProductosComponent },
-    { path: "agregar-productos", component: AgregarProductosComponent },
+    { path: "productos", component: ProductsComponent,canActivate:[rolGuarMe] },
+    { path: "usuarios", component: UsuariosComponent,canActivate:[rolGuardAd]},
+    { path: "lista-menu", component: ListaMenuComponent, canActivate: [rolGuardAd]},
+    { path: "login", component: LoginComponent,canActivate:[loginGuard]},
+    { path: "registro", component: RegistroComponent,canActivate:[registroGuard]},
+    { path: "agregar-orden", component: CarritoComponent, canActivate: [rolGuarMe]},
+    { path: "agregar-productos", component: AgregarProductosComponent, canActivate:[rolGuardAd]},
+    { path: "editar-producto/:idProducto", component: EditarProductosComponent,canActivate:[rolGuardAd]},
+    { path: "editar-usuario/:idUsuario", component: EditarUsuariosComponent,canActivate:[rolGuardAd] },
+    { path: "detalle-productos/:idProducto", component: DetalleProductosComponent,canActivate:[rolGuarMe] },
+    { path: "lista-ordenes", component: ListaOrdenesComponent,canActivate:[rolGuarMe] },
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: '**', component: Error404Component },
 ];
