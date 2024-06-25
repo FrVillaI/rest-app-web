@@ -1,0 +1,15 @@
+/* Estilos para la tarjeta */
+.card {
+    border: none;
+}
+
+/* Estilos para la imagen */
+.card-img-top {
+    border-radius: 0;
+}
+
+/* Estilos para el botón */
+.btn-danger {
+    width: 100%;
+}
+

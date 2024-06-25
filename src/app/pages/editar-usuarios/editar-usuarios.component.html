@@ -1,0 +1,55 @@
+<div class="container">
+    <h1>Editar Usuario</h1>
+
+    <form (ngSubmit)="editar(formulario)" #formulario="ngForm">
+        <label for="username" class="form-label">Id:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'📧'}}</span>
+            <input type="text" class="form-control" placeholder="id" name="id" [(ngModel)]="id">
+        </div>
+        <label for="username" class="form-label">Email:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'📧'}}</span>
+            <input type="text" class="form-control" placeholder="Email" name="email" [(ngModel)]="email">
+        </div>
+        <label for="pwd" class="form-label">Password:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'🔑'}}</span>
+            <input type="text" class="form-control" placeholder="Password" name="password" [(ngModel)]="password">
+        </div>
+        <label for="pwd" class="form-label">Nombre:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'🦰'}}</span>
+            <input type="text" class="form-control" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+        </div>
+        <label for="pwd" class="form-label">Apellido:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'🦰'}}</span>
+            <input type="text" class="form-control" placeholder="Apellido" name="apellido" [(ngModel)]="apellido">
+        </div>
+        <label for="pwd" class="form-label">Edad:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="number" class="form-control" placeholder="Edad" name="edad" [(ngModel)]="edad">
+        </div>
+        <label for="pwd" class="form-label">Genero:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{'🫥'}}</span>
+            <select name="genero"  class="form-control" [(ngModel)]="genero">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+            </select>
+        </div>
+        <label for="pwd" class="form-label">Tipo de usuario:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <select name="tipoUser"  class="form-control" [(ngModel)]="tipoUser">
+                <option value="usuario">Usuario</option>
+                <option value="admin">Admin</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-warning" [routerLink]="['/usuarios']">Regresar</a>
+    </form>
+</div>

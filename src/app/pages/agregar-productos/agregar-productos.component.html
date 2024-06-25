@@ -1,0 +1,45 @@
+<div class="container">
+    <h1>Agregar Producto</h1>
+
+    <form (ngSubmit)="agregar(formulario)" #formulario="ngForm">
+        <label for="username" class="form-label">Id:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="ProductoID" name="productoID" [(ngModel)]="productoID">
+        </div>
+        <label for="pwd" class="form-label">Nombre:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="Nombre" name="nombre" [(ngModel)]="nombre">
+        </div>
+        <label for="pwd" class="form-label">Codigo:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="Codigo" name="codigo" [(ngModel)]="codigo">
+        </div>
+        <label for="pwd" class="form-label">Descripcion:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="Descripcion" name="descripcion"
+                [(ngModel)]="descripcion">
+        </div>
+        <label for="pwd" class="form-label">Categoria:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="Categoria" name="categoria" [(ngModel)]="categoria">
+        </div>
+        <label for="pwd" class="form-label">Url:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="text" class="form-control" placeholder="Url" name="url" [(ngModel)]="url">
+        </div>
+        <label for="pwd" class="form-label">Precio:</label>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">{{''}}</span>
+            <input type="number" class="form-control" placeholder="Precio" name="precio" [(ngModel)]="precio">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+        <a class="btn btn-warning" [routerLink]="['/lista-productos']">Regresar</a>
+    </form>
+</div>

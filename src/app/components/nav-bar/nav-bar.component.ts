@@ -9,5 +9,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './nav-bar.component.css'
 })
 export class NavBarComponent {
-
+  cerrar() {
+    localStorage.removeItem('token');
+    localStorage.removeItem('role');
+    localStorage.removeItem('productos');
+    window.location.href = 'login';
+  }
 }

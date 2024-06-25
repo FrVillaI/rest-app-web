@@ -1,0 +1,43 @@
+<div id="carouselMultiItemExample" data-mdb-carousel-init class="carousel slide carousel-dark text-center" data-mdb-ride="carousel" style="background-color:#F2F2F2;">
+    <div class="container">
+        <div class="row">
+            <!-- Sección de productos en el lado izquierdo -->
+            <div class="col-md-8">
+                <div class="carousel-inner py-4">
+                    <div class="carousel-item active">
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                @for (item of productos; track item) {
+                                <div class="col">
+                                    <div class="card h-100 bg-white text-dark">
+                                        <div class="row g-0">
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{item.nombre}}</h5>
+                                                    <p class="card-text">{{item.precio}}</p>
+                                                    <button (click)="deleteID(item.productoID)" class="btn btn-danger">Eliminar</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <img src={{item.url}} class="card-img-top h-100" alt="Waterfall" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Sección de total a pagar en el lado derecho -->
+            <div class="col-md-4">
+                <div class="card bg-white text-dark p-4" style="width: 100%;">
+                    <h1>Total a pagar: ${{totalPagar}}</h1>
+                    <h1>Total a pagar más IVA: ${{totalPagarIva}}</h1>
+                    <button (click)="finalizar()" class="btn btn-success mt-3">Finalizar compra</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
